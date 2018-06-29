@@ -45,5 +45,30 @@ namespace WordCounter.Test
       //Assert
       Assert.AreEqual(split, "2");
     }
+    [TestMethod]
+    public void SixWords_True()
+    {
+      //assign
+      RepeatCounter newWord = new RepeatCounter("the dude has all the answers");
+
+      //act
+      string split = newWord.SeperateWords();
+
+
+      //Assert
+      Assert.AreEqual(split, "6");
+    }
+    [TestMethod]
+    public void NineWords_True()
+    {
+      //assign
+      RepeatCounter newWord = new RepeatCounter("You think the pet rock was a good idea?");
+      //act
+      string split = newWord.SeperateWords();
+
+
+      //Assert
+      Assert.AreEqual(split, "9");
+    }
   }
 }
