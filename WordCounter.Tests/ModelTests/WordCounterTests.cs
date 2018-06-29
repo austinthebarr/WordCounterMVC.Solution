@@ -85,7 +85,7 @@ namespace WordCounter.Test
 
       //act
      newWord.CreateDictionary();
-     Console.WriteLine(RepeatedWordCount);
+     Console.WriteLine(RepeatedWordCount["bob"]);
 
       //Assert
       Assert.AreEqual(RepeatedWordCount["bob"] , 0);

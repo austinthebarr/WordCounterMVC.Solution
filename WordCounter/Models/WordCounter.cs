@@ -37,9 +37,8 @@ namespace WordCounter.Models
       return count.ToString();
     }
 
-    public  void CreateDictionary()
+    public void CreateDictionary()
     {
-      Dictionary<string, int> RepeatedWordCount = new Dictionary<string,int>{};
       string words = this.GetWord();
       string[] splitUpWords = words.Split(' ');
       for (int i = 0; i < splitUpWords.Length; i++)
