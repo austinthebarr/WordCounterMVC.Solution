@@ -81,15 +81,15 @@ namespace WordCounter.Test
     // {
     //   //assign
     //   RepeatCounter newWord = new RepeatCounter("bob");
-    //   Dictionary<string, int> RepeatedWordCount = new Dictionary<string,int>{};
+    //   Dictionary<string, int> repeatedWordCount = new Dictionary<string,int>{};
     //
     //   //act
     //  newWord.CreateDictionary();
-    //  Console.WriteLine(RepeatedWordCount.ContainsKey("1"));
-    //  Console.WriteLine(RepeatedWordCount);
+    //  Console.WriteLine(repeatedWordCount.ContainsKey("1"));
+    //  Console.WriteLine(repeatedWordCount);
     //
     //   //Assert
-    //   Assert.AreEqual(RepeatedWordCount["bob"] , 1);
+    //   Assert.AreEqual(repeatedWordCount["bob"] , 1);
     //
     // }
   }

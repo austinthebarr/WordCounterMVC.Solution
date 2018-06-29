@@ -8,13 +8,15 @@ namespace WordCounter.Models
   public class RepeatCounter
   {
     private string _userWord;
+    private int _wordOccurences;
 
     public RepeatCounter(string userWord)
     {
       _userWord = userWord;
+      _wordOccurences = 0;
     }
 
-    Dictionary<string, int> RepeatedWordCount = new Dictionary<string,int>{};
+    Dictionary<string, int> repeatedWordCount = new Dictionary<string,int>{};
 
     public string GetWord()
     {
@@ -25,6 +27,17 @@ namespace WordCounter.Models
     {
       _userWord = newWord;
     }
+
+    public void setOccurence(int wordOccurnces)
+    {
+    _wordOccurences = wordOccurnces;
+    }
+
+    public int getOccurnces()
+    {
+      return _wordOccurences;
+    }
+
 
     public string SeperateWords()
     {
@@ -37,22 +50,22 @@ namespace WordCounter.Models
       }
       return count.ToString();
     }
-
+    //
     // public void CreateDictionary()
     // {
-    //   Dictionary<string, int> RepeatedWordCount = new Dictionary<string,int>{};
+    //   Dictionary<string, int> repeatedWordCount = new Dictionary<string,int>{};
     //   string words = this.GetWord();
     //   string[] splitUpWords = words.ToLower().Split(' ');
     //   for (int i = 0; i < splitUpWords.Length; i++)
     //   {
-    //     if(RepeatedWordCount.ContainsKey(splitUpWords[i]))
+    //     if(repeatedWordCount.ContainsKey(splitUpWords[i]))
     //     {
-    //       int value = RepeatedWordCount[splitUpWords[i]];
-    //       RepeatedWordCount[splitUpWords[i]] = value +1;
+    //       int value = repeatedWordCount[splitUpWords[i]];
+    //       repeatedWordCount[splitUpWords[i]] = value +1;
     //     }
     //     else
     //     {
-    //       RepeatedWordCount.Add(splitUpWords[i], 1);
+    //       repeatedWordCount.Add(splitUpWords[i], 1);
     //     }
     //   }
     // }
@@ -61,10 +74,22 @@ namespace WordCounter.Models
   {
     static void Main()
     {
-      Console.WriteLine("Give me a word for me to count!");
-       string inputtedString = Console.ReadLine();
+      Console.WriteLine("Give me a sentance!");
+      string userInputSentence = Console.ReadLine();
+      string[] userSentence = userInputSentence.ToLower().Split(' ');
+      Console.WriteLine("Give me a word for me to count in your sentance!");
+       string inputtedString = Console.ReadLine().ToLower();
        RepeatCounter newWord = new RepeatCounter(inputtedString);
-       Console.WriteLine(newWord.SeperateWords());
+       int occurence = 0;
+       foreach (string word in userSentence)
+       {
+         if (inputtedString == word )
+         {
+           occurence += 1;
+         }
+         newWord.setOccurence(occurence);
+       }
+       Console.WriteLine(newWord.GetWord() + " Occures " + newWord.getOccurnces());
     }
   }
 }
