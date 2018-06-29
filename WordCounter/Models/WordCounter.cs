@@ -61,7 +61,10 @@ namespace WordCounter.Models
   {
     static void Main()
     {
-      Console.WriteLine("Give me a word for me to count!")
+      Console.WriteLine("Give me a word for me to count!");
+       string inputtedString = Console.ReadLine();
+       RepeatCounter newWord = new RepeatCounter(inputtedString);
+       Console.WriteLine(newWord.SeperateWords());
     }
   }
 }
