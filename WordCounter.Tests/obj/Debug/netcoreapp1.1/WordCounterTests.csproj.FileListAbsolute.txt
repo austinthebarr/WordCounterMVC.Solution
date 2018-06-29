@@ -1,0 +1,15 @@
+/Users/austinbarr/Desktop/WordCounter.Solution/WordCounter.Tests/obj/Debug/netcoreapp1.1/WordCounterTests.csproj.CoreCompileInputs.cache
+/Users/austinbarr/Desktop/WordCounter.Solution/WordCounter.Tests/obj/Debug/netcoreapp1.1/WordCounterTests.AssemblyInfoInputs.cache
+/Users/austinbarr/Desktop/WordCounter.Solution/WordCounter.Tests/obj/Debug/netcoreapp1.1/WordCounterTests.AssemblyInfo.cs
+/Users/austinbarr/Desktop/WordCounter.Solution/WordCounter.Tests/bin/Debug/netcoreapp1.1/Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+/Users/austinbarr/Desktop/WordCounter.Solution/WordCounter.Tests/bin/Debug/netcoreapp1.1/Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+/Users/austinbarr/Desktop/WordCounter.Solution/WordCounter.Tests/bin/Debug/netcoreapp1.1/Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+/Users/austinbarr/Desktop/WordCounter.Solution/WordCounter.Tests/bin/Debug/netcoreapp1.1/WordCounterTests.deps.json
+/Users/austinbarr/Desktop/WordCounter.Solution/WordCounter.Tests/bin/Debug/netcoreapp1.1/WordCounterTests.runtimeconfig.json
+/Users/austinbarr/Desktop/WordCounter.Solution/WordCounter.Tests/bin/Debug/netcoreapp1.1/WordCounterTests.runtimeconfig.dev.json
+/Users/austinbarr/Desktop/WordCounter.Solution/WordCounter.Tests/bin/Debug/netcoreapp1.1/WordCounterTests.dll
+/Users/austinbarr/Desktop/WordCounter.Solution/WordCounter.Tests/bin/Debug/netcoreapp1.1/WordCounterTests.pdb
+/Users/austinbarr/Desktop/WordCounter.Solution/WordCounter.Tests/bin/Debug/netcoreapp1.1/WordCounter.dll
+/Users/austinbarr/Desktop/WordCounter.Solution/WordCounter.Tests/bin/Debug/netcoreapp1.1/WordCounter.pdb
+/Users/austinbarr/Desktop/WordCounter.Solution/WordCounter.Tests/obj/Debug/netcoreapp1.1/WordCounterTests.dll
+/Users/austinbarr/Desktop/WordCounter.Solution/WordCounter.Tests/obj/Debug/netcoreapp1.1/WordCounterTests.pdb
