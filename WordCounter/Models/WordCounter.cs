@@ -13,6 +13,8 @@ namespace WordCounter.Models
       _userWord = userWord;
     }
 
+    Dictionary<string, int> RepeatedWordCount = new Dictionary<string,int>{};
+
     public string GetWord()
     {
       return _userWord;
@@ -33,6 +35,26 @@ namespace WordCounter.Models
         count +=1;
       }
       return count.ToString();
+    }
+
+    public  void CreateDictionary()
+    {
+      Dictionary<string, int> RepeatedWordCount = new Dictionary<string,int>{};
+      string words = this.GetWord();
+      string[] splitUpWords = words.Split(' ');
+      for (int i = 0; i < splitUpWords.Length; i++)
+      {
+        if(RepeatedWordCount.ContainsKey(splitUpWords[i]))
+        {
+          int value = RepeatedWordCount[splitUpWords[i]];
+          RepeatedWordCount[splitUpWords[i]] = value +1;
+        }
+        else
+        {
+          RepeatedWordCount.Add(splitUpWords[i], 1);
+        }
+      }
+
     }
   }
 }

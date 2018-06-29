@@ -2,6 +2,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using WordCounter.Models;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
+using System;
 
 namespace WordCounter.Test
 {
@@ -20,6 +21,7 @@ namespace WordCounter.Test
       //Assert
       Assert.AreEqual(result,"the");
     }
+
     [TestMethod]
     public void GetwordBySetttingWord_False()
     {
@@ -32,6 +34,7 @@ namespace WordCounter.Test
       //Assert
       Assert.AreEqual(result,"the");
     }
+
     [TestMethod]
     public void MultipleWords_True()
     {
@@ -45,6 +48,7 @@ namespace WordCounter.Test
       //Assert
       Assert.AreEqual(split, "2");
     }
+
     [TestMethod]
     public void SixWords_True()
     {
@@ -58,6 +62,7 @@ namespace WordCounter.Test
       //Assert
       Assert.AreEqual(split, "6");
     }
+
     [TestMethod]
     public void NineWords_True()
     {
@@ -69,6 +74,22 @@ namespace WordCounter.Test
 
       //Assert
       Assert.AreEqual(split, "9");
+    }
+
+    [TestMethod]
+    public void DictionaryWorks_true()
+    {
+      //assign
+      RepeatCounter newWord = new RepeatCounter("bob");
+      Dictionary<string,int> RepeatedWordCount = new Dictionary<string,int>{};
+
+      //act
+     newWord.CreateDictionary();
+     Console.WriteLine(RepeatedWordCount);
+
+      //Assert
+      Assert.AreEqual(RepeatedWordCount["bob"] , 0);
+
     }
   }
 }
