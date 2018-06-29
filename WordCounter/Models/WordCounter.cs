@@ -7,7 +7,6 @@ namespace WordCounter.Models
   public class RepeatCounter
   {
     private string _userWord;
-    List<string> wordList = new List<string> {};
 
     public RepeatCounter(string userWord)
     {
@@ -22,6 +21,18 @@ namespace WordCounter.Models
     public void SetWord(string newWord)
     {
       _userWord = newWord;
+    }
+
+    public string SeperateWords()
+    {
+      string words = this.GetWord();
+      string[] seperate = words.ToLower().Split(' ');
+      int count = 0;
+      foreach (string word in seperate)
+      {
+        count +=1;
+      }
+      return count.ToString();
     }
   }
 }

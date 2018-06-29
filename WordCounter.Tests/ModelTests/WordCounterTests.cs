@@ -30,7 +30,20 @@ namespace WordCounter.Test
       string result = newWord.GetWord();
 
       //Assert
-      Assert.AreEqual(result,"dog");
+      Assert.AreEqual(result,"the");
+    }
+    [TestMethod]
+    public void MultipleWords_True()
+    {
+      //assign
+      RepeatCounter newWord = new RepeatCounter("the buddy");
+
+      //act
+      string split = newWord.SeperateWords();
+
+
+      //Assert
+      Assert.AreEqual(split, "2");
     }
   }
 }
