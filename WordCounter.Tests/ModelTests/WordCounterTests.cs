@@ -36,61 +36,63 @@ namespace WordCounter.Test
     }
 
     [TestMethod]
-    public void MultipleWords_True()
+    public void SeperateWordsActuallyWorks_True()
     {
       //assign
-      RepeatCounter newWord = new RepeatCounter("the buddy");
+      RepeatCounter newWord = new RepeatCounter("buddy");
+      newWord.SetSentence("Hello buddy");
 
       //act
-      string split = newWord.SeperateWords();
-
+      string result = newWord.GetWord();
+      string number = newWord.SearchWord();
 
       //Assert
-      Assert.AreEqual(split, "2");
+      Assert.AreEqual(number, "1");
     }
 
     [TestMethod]
-    public void SixWords_True()
+    public void SeperateWordsFindsmultipleWords_True()
     {
       //assign
-      RepeatCounter newWord = new RepeatCounter("the dude has all the answers");
+      RepeatCounter newWord = new RepeatCounter("dude");
+      newWord.SetSentence("The dude walks like a dude");
 
       //act
-      string split = newWord.SeperateWords();
-
-
+      string result = newWord.GetWord();
+      string number = newWord.SearchWord();
       //Assert
-      Assert.AreEqual(split, "6");
+      Assert.AreEqual(number, "2");
     }
 
     [TestMethod]
-    public void NineWords_True()
+    public void SeperateWordsFindsmultipleWordsWithCapitals_True()
     {
       //assign
-      RepeatCounter newWord = new RepeatCounter("You think the pet rock was a good idea?");
+      RepeatCounter newWord = new RepeatCounter("LiKE");
+      newWord.SetSentence("the girl was liKE , omg like thats crazy, LIKe crazy.");
+
       //act
-      string split = newWord.SeperateWords();
+      string result = newWord.GetWord();
+      string number = newWord.SearchWord();
 
-
+      //failed since get this word was not lower
       //Assert
-      Assert.AreEqual(split, "9");
+      Assert.AreEqual(number, "3");
     }
 
-    // [TestMethod]
-    // public void DictionaryWorks_true()
-    // {
-    //   //assign
-    //   RepeatCounter newWord = new RepeatCounter("bob");
-    //   Dictionary<string, int> repeatedWordCount = new Dictionary<string,int>{};
-    //
-    //   //act
-    //  newWord.CreateDictionary();
-    //  Console.WriteLine(repeatedWordCount.ContainsKey("1"));
-    //  Console.WriteLine(repeatedWordCount);
-    //
-    //   //Assert
-    //   Assert.AreEqual(repeatedWordCount["bob"] , 1);
-    //
-    // }
+    [TestMethod]
+    public void SeperateWordsFindsmultipleWordsWithCapitals_False()
+    {
+      //assign
+      RepeatCounter newWord = new RepeatCounter("LiKE");
+      newWord.SetSentence("the girl was liKE , omg like thats crazy, LIKe crazy. Like omg");
+
+      //act
+      string result = newWord.GetWord();
+      string number = newWord.SearchWord();
+
+      //Assert
+      Assert.AreEqual(number, "3");
+    }
   }
 }
