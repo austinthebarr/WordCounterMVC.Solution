@@ -63,20 +63,21 @@ namespace WordCounter.Models
       return count.ToString();
     }
   }
-  class Program
-  {
-    static void Main()
-    {
-      Console.WriteLine("Give me a word to search.");
-      string inputtedWord = Console.ReadLine();
-
-      Console.WriteLine("Give me a sentence to search for the word.");
-      string inputtedSentence = Console.ReadLine();
-
-      RepeatCounter newWord = new RepeatCounter(inputtedWord);
-      newWord.SetSentence(inputtedSentence);
-
-      Console.WriteLine(newWord.GetWord() + " occured " + newWord.SearchWord() + " times.");
-    }
-  }
-}
+}  
+//   class Program
+//   {
+//     static void Main()
+//     {
+//       Console.WriteLine("Give me a word to search.");
+//       string inputtedWord = Console.ReadLine();
+//
+//       Console.WriteLine("Give me a sentence to search for the word.");
+//       string inputtedSentence = Console.ReadLine();
+//
+//       RepeatCounter newWord = new RepeatCounter(inputtedWord);
+//       newWord.SetSentence(inputtedSentence);
+//
+//       Console.WriteLine(newWord.GetWord() + " occured " + newWord.SearchWord() + " times.");
+//     }
+//   }
+// }
