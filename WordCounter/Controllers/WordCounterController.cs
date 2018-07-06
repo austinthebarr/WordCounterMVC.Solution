@@ -16,10 +16,12 @@ namespace WordCounter.Controllers
     {
       return View();
     }
-    // [HttpPost("/WordCounter/WordCount")]
-    // public ActionResult WordCount()
-    // {
-    //
-    // }
+    [HttpPost("/WordCounter/Result")]
+    public ActionResult NewWordToCount()
+    {
+      RepeatCounter newWord = new RepeatCounter(Request.Form["newWord"]);
+      newWord.SetSentence(Request.Form["newSentence"]);
+      return View("result",newWord);
+    }
   }
 }

@@ -51,7 +51,7 @@ namespace WordCounter.Models
     public string SearchWord()
     {
       string words = this.GetWord().ToLower();
-      string [] searchSentence = this.GetSentence().ToLower().Split(' ');
+      string [] searchSentence = this.GetSentence().ToLower().Split(' ', '.', ',','!','?');
       int count = 0;
       foreach (string word in searchSentence)
       {
@@ -63,21 +63,4 @@ namespace WordCounter.Models
       return count.ToString();
     }
   }
-}  
-//   class Program
-//   {
-//     static void Main()
-//     {
-//       Console.WriteLine("Give me a word to search.");
-//       string inputtedWord = Console.ReadLine();
-//
-//       Console.WriteLine("Give me a sentence to search for the word.");
-//       string inputtedSentence = Console.ReadLine();
-//
-//       RepeatCounter newWord = new RepeatCounter(inputtedWord);
-//       newWord.SetSentence(inputtedSentence);
-//
-//       Console.WriteLine(newWord.GetWord() + " occured " + newWord.SearchWord() + " times.");
-//     }
-//   }
-// }
+}
