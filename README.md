@@ -1,40 +1,49 @@
 # _WordCounter_
 
-#### _WordCounter, June 29, 2018_
+#### _WordCounter, July 6, 2018_
 
-#### By _**Austin Barr **_
+#### By _**Austin Barr**_
 
 ## Description
 
-_This Program will count a word in a sentence for you!.
-Specs:
-1. Program will Take a word and count it.
+_This Program will count a word in a sentence for you!._
+### Specs:
+###### 1. Program will Take a word and count it.
   Example
-  Input: the
-  Output: 1
-2. Program will Take a word and convert to lowercase.
+  Input:the
+  Output:1
+###### 2. Program will Take a word and convert to lowercase.
     Example
     Input:DoG
     OutPut:dog
-3. Program will take a sentence.
+###### 3. Program will take a sentence.
     Example
     Input: the dog was here
     Output: the dog was here
-4.Program will convert sentence to lowercase
+###### 4. Program will convert sentence to lowercase
     Example
     Input: The Dog WAS here
     OutPut: the dog was here
-5.Program will take word and count the times it is in the sentence.
+###### 5. Program will separate sentence words from special characters and spaces.
+    Example
+    Input: The Dog! was. Here?
+    OutPut: the dog ! was . Here ?
+
+###### 6.Program will take word and count the times it is in the sentence.
     Example
     Input: dude; Dude your such a dude;
-    output: dude occured 2 times.
+    output: dude occurred 2 times.
 
-_
+
+
 
 
 ## Setup/Installation Requirements
 
-* _Clone Repository_
+*_Clone Repository_
+*_Download and install the .NET Core 1.1 SDK (Software Development Kit) and .NET runtime_
+*_Download and install Mono for your OS_
+*_Open Folder and navigate to WordCounter, dotnet run in terminal_
 
 ## Known Bugs
 
@@ -45,7 +54,8 @@ _Austin Barr email: austinbarr@protonmail.com_
 
 ## Technologies Used
 
-_C#_
+_Razor,html,C#_
+
 
 ### License
 
