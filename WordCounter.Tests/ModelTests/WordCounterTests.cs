@@ -92,7 +92,7 @@ namespace WordCounter.Test
       string number = newWord.SearchWord();
 
       //Assert
-      Assert.AreEqual(number, "3");
+      Assert.AreEqual(number, "4");
     }
   }
 }
