@@ -81,7 +81,7 @@ namespace WordCounter.Test
     }
 
     [TestMethod]
-    public void SeperateWordsFindsmultipleWordsWithCapitals_False()
+    public void SeperateWordsFindsmultipleWordsWithCapitals4Words_True()
     {
       //assign
       RepeatCounter newWord = new RepeatCounter("LiKE");
@@ -93,6 +93,21 @@ namespace WordCounter.Test
 
       //Assert
       Assert.AreEqual(number, "4");
+    }
+
+    [TestMethod]
+    public void SeperateWordsFindsmultipleWordsWithSpecialCharcters_True()
+    {
+      //assign
+      RepeatCounter newWord = new RepeatCounter("crazy");
+      newWord.SetSentence("the girl was liKE, omg like thats crazy, LIKe crazy. Like omg");
+
+      //act
+      string result = newWord.GetWord();
+      string number = newWord.SearchWord();
+
+      //Assert
+      Assert.AreEqual(number, "2");
     }
   }
 }
